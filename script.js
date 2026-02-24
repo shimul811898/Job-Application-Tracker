@@ -109,14 +109,14 @@ allCards.addEventListener('click', function (event) {
         let status = parentNode.querySelector('.status').innerText;
         let applied = parentNode.querySelector('.applied').innerText;
 
-        parentNode.querySelector('.applied').innerText = 'Applied'
+        parentNode.querySelector('.applied').innerText = 'Interview'
 
         let cardInfo = {
             cardHeading,
             profession,
             remote,
             status,
-            applied: "Applied"
+            applied: "Interview"
         }
 
         let interviewExist = InterviewList.find(item => item.cardHeading == cardInfo.cardHeading);
@@ -248,7 +248,7 @@ carbonCards.addEventListener("click", function (event) {
 
     if (event.target.classList.contains("greenBtn")) {
 
-        parentNode.querySelector('.applied').innerText = "Applied";
+        parentNode.querySelector('.applied').innerText = "Interview";
 
 
         RejectedList = RejectedList.filter(
@@ -261,7 +261,7 @@ carbonCards.addEventListener("click", function (event) {
             profession,
             remote,
             status,
-            applied: "Applied"
+            applied: "Interview"
         });
 
         renderRejected();
