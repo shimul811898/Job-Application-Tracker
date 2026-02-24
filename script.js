@@ -177,10 +177,10 @@ allCards.addEventListener('click', function (event) {
         jobEmpty();
 
     }
+
+    //delete button
     else if (event.target.classList.contains("icon")) {
         let parentNode = event.target.parentNode.parentNode;
-        // let parentNode = event.target.closest(".applicationCard");
-
 
         let cardHeading = parentNode.querySelector(".cardHeading").innerText;
 
@@ -198,27 +198,7 @@ allCards.addEventListener('click', function (event) {
     }
 })
 
-//delete button
-filteringCards.addEventListener("click", function (event) {
-    if (event.target.classList.contains("icon")) {
-        let parentNode = event.target.parentNode.parentNode;
 
-
-        let cardHeading = parentNode.querySelector(".cardHeading").innerText;
-
-        InterviewList = InterviewList.filter(
-            (item) => item.cardHeading !== cardHeading,
-        );
-
-        RejectedList = RejectedList.filter(
-            (item) => item.cardHeading !== cardHeading,
-        );
-
-        parentNode.remove();
-        count();
-        jobEmpty();
-    }
-});
 // Interview tab 
 filteringCards.addEventListener("click", function (event) {
 
